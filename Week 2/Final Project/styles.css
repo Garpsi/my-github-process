@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.025em;
+}
+
+body {
+    padding: 32px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+.purple {
+    color: #6415FF;
+}
+
+.btn {
+    background-color: #6415FF;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 9999px;
+}
+
+.nav__container {
+
+}
+
+.nav__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 12px;
+}
+
+.logo__name {
+    color: #243E63;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    margin: 0 24px;
+    color: #243E63;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 4px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav__link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    background-color: #6415FF;
+
+}
+
+.nav__link:hover::before {
+    width: 100%;
+    height: 2px;    
+}
+
+.nav__link:hover {
+    color: #6415FF;
+}
+
+.nav__link--login {
+    margin-left: 40px;
+}
+
+.btn__nav {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*
+
+HEADER
+
+*/
+
+.header__container {
+    padding: 100px 0;
+
+}
+
+.header__row {
+    width: 100%;
+    display: flex;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    margin: 32px 0;
+}
+
+.header__description {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__img--wrapper {
+    width: 60%;
+}
+
+.header__img {
+    
+    width: 90%;
+}
+
+/*
+
+SERVICES
+
+*/
+
+.container {
+    padding: 80px 0;
+}
+
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service {
+    display: flex;
+    width: calc(100% / 3);
+}
+
+.service__description {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+
+PLANS 
+
+*/
+
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plan {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+
+FOOTER
+
+*/
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    align-items: center;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
