@@ -7,7 +7,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
+main {
     padding: 32px;
 }
 
@@ -71,7 +71,15 @@ ul {
 }
 
 li {
+    font-size: 14px;
+    font-weight: 500;
     list-style-type: none;
+
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 16px;
 }
 
 /*
@@ -79,6 +87,10 @@ li {
 NAV
 
 */
+
+#landing {
+    padding-top: 32px;
+}
 
 .nav__row {
     display: flex;
@@ -667,4 +679,166 @@ PRICING
 
 .grey {
     color: #e2e8f0;
+}
+
+
+/*
+
+CONTACT
+
+*/
+
+#contact {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.container__contact {
+    border-radius: 8px;
+    background-color: #6415FF;
+    padding: 100px 0;
+    max-width: 1200px;
+}
+
+
+.contact__row {
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.positive {
+    font-size: 30px;
+    color: #f7fafc;
+    width: 50%;
+    display: flex;
+    text-align: right;
+}
+
+.two__btn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.two__btn--first {
+    padding: 0 40px;
+    margin-right: 32px;
+    border-radius: 9999px;
+    border: none;
+    background-color: rgba(245,101,101);
+    color: rgba(247,250,252);
+    font-weight: 700;
+    font-size: 16px;
+    height: 66px;
+    transition: all 300ms ease-in-out;
+}
+
+.two__btn--first:hover {
+    background-color: rgb(190, 61, 61);
+}
+
+.two__btn--second {
+    padding: 0 40px;
+    margin-right: 0px;
+    border-radius: 9999px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: rgba(247,250,252);
+    font-weight: 700;
+    font-size: 16px;
+    height: 66px;
+    transition: all 200ms ease;
+}
+
+.two__btn--second:hover {
+    background-color: white;
+    color: #6415FF;
+}
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    background-color: #6415FF;
+    color: #f7fafc;
+    padding: 32px;
+}
+
+.footer__sections {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 2px solid #7b40f09d;
+}
+
+.footer_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__section__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    line-height: 2.5;
+    padding-bottom: 60px;
+}
+
+.footer__end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.footer__logo {
+    height: 32px;
+    width: 32px;
+}
+
+.footer__logo__name {
+    padding-left: 8px;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.footer__logo--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.social__links {
+    display: flex;
+}
+
+.social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-right: 16px;
+    padding: 8px;
+    border-radius: 9999px;
+    background-color: white;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.social__link:hover {
+    background-color: #a4afc0;
+
 }
