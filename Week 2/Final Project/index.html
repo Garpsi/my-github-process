@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ee860e4ff4.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -20,11 +21,27 @@
                     <ul class="nav__links">
                         <li><a href="#" class="nav__link">About</a></li>
                         <li><a href="#" class="nav__link">Blog</a></li>
-                        <li><a href="#" class="nav__link">Pricing</a></li>
-                        <li><a href="#" class="nav__link">Contact Us</a></li>
+                        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+                        <li><a href="#contact" class="nav__link">Contact Us</a></li>
                         <li><a href="#" class="nav__link nav__link--login">Login</a></li>
                         <button class="btn btn__nav">Sign Up</button>
                     </ul>
+                    <button class="btn__menu" onclick="openMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="menu__backdrop">
+                        <button class="btn__menu--close" onclick="closeMenu()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <ul class="menu__links">
+                            <li class="menu__list"><a href="#" onclick="closeMenu()">About</a></li>
+                            <li class="menu__list"><a href="#" onclick="closeMenu()">Blog</a></li>
+                            <li class="menu__list"><a href="#" onclick="closeMenu()">Pricing</a></li>
+                            <li class="menu__list"><a href="#" onclick="closeMenu()">Contact Us</a></li>
+                            <li class="menu__list"><a href="#" onclick="closeMenu()">Login</a></li>
+                            <button class="menu__list menu__list--btn"><a class="menu__sign-up" href="#" onclick="closeMenu()">Sign Up</a></button>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -32,7 +49,7 @@
             <div class="header__container">
                 <div class="row header__row">
                     <div class="header__description">
-                        <h1>
+                        <h1 class="header__description--title">
                             Beautiful React Templates <span class="purple">for you.</span>
                         </h1>
                         <p class="header__description--para">
@@ -40,7 +57,7 @@
                         </p>
                         <div class="header__button--wrapper">
                             <input class="header__description--email" type="email" placeholder="Your E-mail Address">
-                            <button class="btn btn__header">Get started</button>
+                            <button class="btn__header">Get started</button>
                         </div>
                         <div class="customers__wrapper">
                             <p class="customers">OUR TRUSTED CUSTOMERS</p>
@@ -119,7 +136,7 @@
                 <div class="row work__row">
                     <div class="work__description">
                         <span class="title purple">QUALITY WORK</span> 
-                        <h2 class="heading">Designed & Developed by <span class="purple">Professionals.</span></h2>
+                        <h2 class="heading small__heading">Designed & Developed by <span class="purple">Professionals.</span></h2>
                         <p class="para work__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <button class="btn btn__learn-more">Learn More</button>
                     </div>
@@ -138,7 +155,7 @@
                     </figure>
                     <div class="steps__description">
                         <span class="title purple">STEPS</span>
-                        <h2 class="heading">Easy to <span class="purple">Get Started.</span></h2>
+                        <h2 class="heading small__heading">Easy to <span class="purple">Get Started.</span></h2>
                         <div class="step">
                             <span class="number">01</span>
                             <div class="steps__box">
@@ -170,7 +187,7 @@
                 <div class="row work__row">
                     <div class="work__description">
                         <span class="title purple">VALUES</span> 
-                        <h2 class="heading values__heading">We Always Abide by Our <span class="purple">Principles.</span></h2>
+                        <h2 class="heading small__heading values__heading">We Always Abide by Our <span class="purple">Principles.</span></h2>
                         <p class="para work__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <div class="principles">
                             <div class="principle">
