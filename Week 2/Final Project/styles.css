@@ -1128,7 +1128,7 @@ footer {
     }
 
     .work__img {
-        width: 520px;
+        width: 450px;
         margin-bottom: 80px;
     }
 
@@ -1151,7 +1151,7 @@ footer {
     }
 
     .steps__img {
-        width: 500px;
+        width: 450px;
         margin-bottom: 80px;
     }
 
@@ -1182,7 +1182,7 @@ footer {
     }
 
     .values__img {
-        width: 500px;
+        width: 450px;
     }
 
     .principles {
@@ -1218,4 +1218,63 @@ footer {
     .copyright {
         margin: 32px 0;
     }
+}
+
+@media (max-width: 450px) {
+    .btn__header {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .header__description--email {
+        font-size: 14px;
+        padding-left: 12px;
+    }
+
+    .work__img {
+        width: 340px;
+    }
+
+    .steps__img {
+        width: 340px;
+    }
+
+    .plan {
+        width: 100%;
+    }
+
+    .container__contact {
+        padding: 60px 0;
+    }
+
+    .positive {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .two__btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .two__btn--first {
+        margin: 0 0 28px 0;
+        text-align: center;
+    }
+
+    .footer__sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__section {
+        text-align: center;
+        width: calc(100% / 3);
+    }
+
+    .footer__section:last-child {
+        margin-left: 24px;
+    }
+    
 }
