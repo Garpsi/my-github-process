@@ -316,7 +316,7 @@ FOOTER
 */
 
 .modal {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -683,6 +683,9 @@ SHAPES
     }
     .modal__half {
         width: 100%;
+    }
+    .shape {
+        display: none;
     }
 }
 
