@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  display: flex;
+
+}
+
+li {
+  list-style: none;
+}
+
+.nav__container {
+  position: relative;
+  height: 300px;
+  max-height: 300px;
+  z-index: 2;
+  background-color: #092c4a;
+}
+
+.header__photo {
+  position: absolute;
+  height: 300px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.nav__bar {
+  padding: 12px 12px 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  filter: invert(1);
+}
+
+.nav__link {
+  margin: 0 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.nav__link:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: auto;
+  width: 0;
+  z-index: 2;
+  background-color: #fff;
+  transition: 500ms ease;
+}
+
+.nav__link:hover::after {
+  height: 3px;
+  width: 100%
+}
+
+.search__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.search__description--title {
+  color: #fff;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.browse__wrapper {
+  width: 100%;
+  max-width: 750px;
+  position: relative;
+}
+
+.browse__search-bar {
+  width: 100%;
+  font-weight: 500;
+  padding: 20px 20px 20px 32px;
+  border-radius: 100px;
+  border: none;
+  font-size: 20px;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  color: #092c4a;
+  top: 16px;
+  right: 16px;
+  bottom: 0;
+  font-size: 32px;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.fa-magnifying-glass:hover {
+  color: rgb(229, 95, 95);
+}
+
+/*
+
+MAIN
+
+*/
+
+.container {
+  padding: 60px 0;
+}
+
+.row {
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.search__results {
+  color: #092c4a;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+
+.movie__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie__card {
+  margin-top: 28px;
+  max-width: 30%;
+}
+
+.movie__title {
+  padding: 6px 0;
+}
+
+.movie__poster {
+  width: 240px;
+  height: 350px;
+  border-radius: 8px;
+  transition: all 300ms ease;
+}
+
+.movie__poster:hover {
+  transform: scale(1.03);
+}
+
