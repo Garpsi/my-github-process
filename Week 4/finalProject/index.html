@@ -33,13 +33,20 @@
   <section>
     <div class="container">
       <div class="row">
-        <h3 class="search__results">Search results:</h3>
-        <div class="movie__list">
-          <div class="movie__card">
-            <img class="movie__poster" src="" alt="">
-            <h3 class="movie__title">Title</h3>
-            <h4><i class="fa-solid fa-calendar-days"></i> : </h4>
+        <div class="search__description">
+          <h3 class="search__results">Search results:</h3>
+          <div class="slider__container">
+            <input type="range" min="1900" max="2022" value="1900" class="slider" id="myRange">
+            <p class="slider__yr">Year: <span id="year"></span></p>
           </div>
+        </div>
+        <div class="movie__list">
+          <div class="spinner__wrapper">
+            <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+          </div>
+        </div>
+        <div class="search__failure">
+            
         </div>
       </div>
     </div>
