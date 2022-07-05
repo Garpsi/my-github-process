@@ -9,7 +9,7 @@ async function onSearch(event) {
 
   spinnerWrapper.classList += ' movies__loading'
   const search = event.target.value
-  movies = await fetch (`http://www.omdbapi.com/?apikey=baeb28bc&s=${search}`)
+  movies = await fetch (`https://www.omdbapi.com/?apikey=baeb28bc&s=${search}`)
   const moviesData = await movies.json()
   spinnerWrapper.classList.remove('movies__loading')
 

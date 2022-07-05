@@ -49,7 +49,13 @@ body {
   filter: invert(1);
 }
 
-.nav__link {
+.nav__links {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link,
+.nav__link--sign-in {
   margin: 0 24px;
   color: #fff;
   font-size: 16px;
@@ -74,6 +80,20 @@ body {
 .nav__link:hover::after {
   height: 3px;
   width: 100%;
+}
+
+.nav__link--sign-in {
+  padding: 8px 20px;
+  background-color: rgb(229, 95, 95);
+  border: 3px solid rgb(229, 95, 95);
+  border-radius: 12px;
+  margin-left: 8px;
+  transition: all 300ms ease;
+}
+
+.nav__link--sign-in:hover {
+  background-color: #fff;
+  color: rgb(229, 95, 95);
 }
 
 .search__description {
@@ -170,6 +190,13 @@ MAIN
   border-radius: 100px;
   background: #159667;
   cursor: pointer;
+}
+
+.slider__yr {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #092c4a;
 }
 
 .search__results {
