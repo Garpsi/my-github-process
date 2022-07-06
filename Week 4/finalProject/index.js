@@ -3,10 +3,8 @@
 
 const movieListEl = document.querySelector('.movie__list')
 const spinnerWrapper = document.querySelector('.spinner__wrapper')
-const noResults = document.querySelector('.search__failure')
 
 async function onSearch(event) {
-
   spinnerWrapper.classList += ' movies__loading'
   const search = event.target.value
   movies = await fetch (`https://www.omdbapi.com/?apikey=baeb28bc&s=${search}`)
