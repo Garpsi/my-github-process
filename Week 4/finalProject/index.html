@@ -22,10 +22,14 @@
     </div>
     <div class="search__description">
       <h1 class="search__description--title">Browse through the movies</h1>
-      <form onsubmit="onSearch(event)" class="browse__wrapper">
+      <div class="browse__wrapper">
+        <input class="browse__search-bar" type="text" placeholder="Search the name of your favourite movies" onchange="onSearch(event)">
+        <button class="search__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <!-- <form onsubmit="onSearch(event)" class="browse__wrapper">
         <input class="browse__search-bar" type="text" placeholder="Search the name of your favourite movies" >
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
+        <button class="search__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form> -->
       </div>
     </div>
     <img class="header__photo" src="./assets/header-photo.jpg" alt="">
@@ -46,9 +50,7 @@
             <i class="fa-solid fa-spinner movies__loading--spinner"></i>
           </div>
         </div>
-        <div class="search__failure">
-            
-        </div>
+        <h3 class="no__results"></h3>
       </div>
     </div>
   </section>
