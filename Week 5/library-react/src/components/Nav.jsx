@@ -1,10 +1,11 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import LibraryLogo from '../assets/Library.svg'
+import React from "react";
+import Logo from "../assets/Library.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   function openMenu() {
-    document.body.classList += ' menu--open'
+    document.body.classList += (' menu--open')
   }
 
   function closeMenu() {
@@ -12,57 +13,54 @@ const Nav = () => {
   }
 
   return (
-      <nav>
-        <div className="nav__container">
-          <a href="/">
-            <img src={LibraryLogo} alt="" className='logo'/>
-          </a>
-          <ul className='nav__links'>
-            <li className='nav__list'>
-              <a href="/" className='nav__link'>
+    <nav>
+      <div className="nav__container">
+        <Link to="/">
+          <img className="logo" src={Logo} alt="" />
+        </Link>
+        <ul className="nav__links">
+          <li className="nav__list">
+            <Link className="nav__link" to="/">
+              Home
+            </Link>
+          </li>
+          <li className="nav__list">
+            <Link className="nav__link" to="/books">
+              Books
+            </Link>
+          </li>
+          <button onClick={openMenu} className="btn__menu">
+            <FontAwesomeIcon icon="bars" />
+          </button>
+          <li className="nav__icon">
+            <Link to="">
+              <FontAwesomeIcon icon="shopping-cart" />
+            </Link>
+          </li>
+        </ul>
+        <div className="menu__backdrop">
+          <button onClick={closeMenu} className="btn__menu btn__menu--close"><FontAwesomeIcon icon='times'/></button>
+          <ul className="menu__links">
+            <li className="menu__list">
+              <Link className="menu__link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
-            <li className='nav__list'>
-              <a href="/" className='nav__link'>
+            <li className="menu__list">
+              <Link className="menu__link" to="/books">
                 Books
-              </a>
+              </Link>
             </li>
-            <button className='btn__menu' onClick={openMenu}>
-              <FontAwesomeIcon icon='bars' />
-            </button>
-            <li className="nav__icon">
-              <a href="/cart" className='nav__link'>
-                <FontAwesomeIcon icon='shopping-cart' />
-              </a>
-              <span className="cart__length">2</span>
+            <li className="menu__list">
+              <Link className="menu__link" to="/cart">
+                Cart
+              </Link>
             </li>
           </ul>
-          <div className="menu__backdrop">
-            <button className='btn__menu btn__menu--close' onClick={closeMenu}>
-              <FontAwesomeIcon icon='times' />
-            </button>
-            <ul className='menu__links'>
-              <li className='menu__list'>
-                <a href="/" className='menu__link'>
-                  Home
-                </a>
-              </li>
-              <li className='menu__list'>
-                <a href="/books" className='menu__link'>
-                  Books
-                </a>
-              </li>
-              <li className='menu__list'>
-                <a href="/cart" className='menu__link'>
-                  Cart
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
+      </div>
+    </nav>
   );
-}
+};
 
 export default Nav;

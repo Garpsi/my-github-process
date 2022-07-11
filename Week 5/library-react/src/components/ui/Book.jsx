@@ -1,39 +1,23 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import Price from './Price';
+import Rating from './Rating';
+import { Link } from 'react-router-dom'
 
 const Book = ({ book }) => {
   return (
     <div className="book">
-      <a href="">
+      <Link to={`/books/${book.id}`}>
         <figure className="book__img--wrapper">
           <img src={book.url} alt="" className="book__img" />
         </figure>
-      </a>
+      </Link>
       <div className="book__title">
-        <a href="/" className="book__title--link">
-          {book.title}
-        </a>
+        <Link to="">{book.title}</Link>
       </div>
-      <div className="book__ratings">
-        {
-          new Array(Math.floor(book.rating)).fill(0).map((_, index) => <FontAwesomeIcon icon='star' key={index}/>)
-        }
-        {
-          !Number.isInteger(book.rating) && <FontAwesomeIcon icon='star-half-alt'/>
-        }
-      </div>
-      <div className="book__price">
-        {book.salePrice ? (
-          <>
-            <span className="book__price--normal">£{book.originalPrice.toFixed(2)}</span>£
-            {book.salePrice.toFixed(2)}
-          </>
-        ) : (
-          <>£{ book.originalPrice.toFixed(2) }</>
-        )}
-      </div>
+      <Rating rating={book.rating}/>
+      <Price originalPrice={book.originalPrice} salePrice={book.salePrice} />
     </div>
   );
-};
+}
 
 export default Book;
