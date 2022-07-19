@@ -1,47 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
-import { auth } from './firebase/init'
-import { 
+import Login from './components/Login';
+import { useEffect } from 'react'
+import {
+  onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  onAuthStateChanged,
+
  } from "firebase/auth";
+ import { auth } from './firebase/init'
 
+  
 function App() {
-  const [user, setUser] = React.useState({});
-  const [loading, setLoading] = React.useState(true)
 
-  React.useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      setLoading(false)
-      console.log(user)
-      if (user) {
-        setUser(user)
-      }
-    })
+  const [user, setUser] = useState({})
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      onAuthStateChanged(auth, (user) => {
+        setLoading(false)
+        if (user) {
+          setUser(user)
+        }
+      }) 
+    }, 1000)
   }, [])
+
   function register() {
-    createUserWithEmailAndPassword(auth, 'email@email.com', 'testing123')
-      .then((user) => {
-        console.log(user)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    createUserWithEmailAndPassword(auth, 'lala@email.com', 'pass123')
+    .then(user => {
+      console.log(user)
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
 
   function login() {
-    signInWithEmailAndPassword(auth, 'email@email.com', 'testing123')
-      .then(({ user }) => {
+      signInWithEmailAndPassword(auth, 'lala@email.com', 'pass123')
+      .then(user => {
         console.log(user)
-        setUser(user)
       })
-      // .then((data) => {
-      //   console.log(data.user)
-      // })
-      .catch((error) => {
-        console.log(error.message)
+      .catch(error => {
+        console.log(error)
       })
   }
 
@@ -49,15 +52,21 @@ function App() {
     signOut(auth)
     setUser({})
   }
-
+  
+  
   return (
-    <div className="App">
-      <button onClick={register}>Register</button>
-      <button onClick={login}>Login</button>
-      <button onClick={logout}>Logout</button>
-      {loading ? 'loading...' : user.email}
+    <div className="nav__login">
+      {
+        loading ? 
+        <div className='skeleton'>
+          <div className="btn__login--skeleton"></div>
+          <div className="btn__logout--skeleton"></div>
+        </div>
+        :
+        <Login register={register} login={login} logout={logout} user={user}/>
+      }
     </div>
-  );
+  )
 }
 
 export default App;

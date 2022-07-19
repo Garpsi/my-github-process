@@ -1,0 +1,62 @@
+
+
+.nav__login {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 14px 24px;
+  margin: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn__login {
+  color: black;
+  font-weight: bold;
+}
+
+.btn__register {
+  background-color: rgb(104, 1, 207);
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn__logout {
+  border-radius: 9999px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: rgb(132, 10, 194);
+  margin: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.skeleton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn__login--skeleton {
+  height: 40px;
+  width: 60px;
+  background-color: grey;
+  border-radius: 4px;
+  border: none;
+  margin: 20px;
+}
+
+.btn__logout--skeleton {
+  height: 44px;
+  width: 44px;
+  background-color: grey;
+  border-radius: 9999px;
+  border: none;
+  margin: 20px;
+}
